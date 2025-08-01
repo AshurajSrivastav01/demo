@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('number', 11);
             $table->unsignedBigInteger('id_group');
-            $table->foreign('id_group');
+            $table->foreign('id_group')->references('id')->on('groups');
             $table->timestamps();
         });
     }
