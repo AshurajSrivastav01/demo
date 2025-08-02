@@ -19,7 +19,7 @@ use App\Http\Controllers\AboutController;
 //     return view('welcome');
 // });
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->middleware('guard');
 Route::get('/about', [AboutController::class, 'index']);
 
 Route::get('/no-access', function (){
