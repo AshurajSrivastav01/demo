@@ -15,10 +15,6 @@ use App\Http\Controllers\AboutController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', [HomeController::class, 'index'])->middleware('guard');
 Route::get('/about', [AboutController::class, 'index']);
 
