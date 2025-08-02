@@ -16,7 +16,7 @@ use App\Http\Controllers\AboutController;
 */
 
 Route::get('/', [HomeController::class, 'index'])->middleware('guard');
-Route::get('/about', [AboutController::class, 'index']);
+Route::get('/about', [AboutController::class, 'index'])->middleware('guard');
 
 Route::get('/no-access', function (){
     echo 'You are not Allowed to Access this page';
